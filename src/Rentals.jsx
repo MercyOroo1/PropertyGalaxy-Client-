@@ -14,7 +14,7 @@ const RentalProperties = ({ userId }) => {
     const fetchRentalProperties = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5050/api/property/rentals');
+        const response = await fetch('https://phase-5-group-project-backend-24.onrender.com/property/rentals');
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(errorData.message || 'An unknown error occurred');
