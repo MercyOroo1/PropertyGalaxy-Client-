@@ -11,7 +11,7 @@ const BoostButton = ({ propertyId, propertyCity, propertyPrice, propertyImage, o
     setSuccess(false);
 
     try {
-      const response = await fetch('http://127.0.0.1:5050/api/boost/property', {
+      const response = await fetch('https://phase-5-group-project-backend-24.onrender.com/boost/property', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
