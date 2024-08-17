@@ -20,7 +20,7 @@ const HomePage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5050/api/property/list')
+        fetch('https://phase-5-group-project-backend-24.onrender.com/property/list')
             .then(response => response.json())
             .then(data => {
                 const uniqueCities = [...new Set(data.map(property => property.city))];
