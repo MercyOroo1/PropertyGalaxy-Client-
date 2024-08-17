@@ -24,7 +24,7 @@ const PaymentForm = () => {
   useEffect(() => {
     const fetchPropertyDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5050/api/userpayment/property-details/${propertyId}`);
+        const response = await fetch(`https://phase-5-group-project-backend-24.onrender.com/userpayment/property-details/${propertyId}`);
         const data = await response.json();
 
         if (!response.ok) {
@@ -52,7 +52,7 @@ const PaymentForm = () => {
     const fetchClientSecret = async () => {
       if (amount && propertyId && userId && installmentAmount) {
         try {
-          const response = await fetch('http://localhost:5050/api/userpayment/create-intent', {
+          const response = await fetch('https://phase-5-group-project-backend-24.onrender.com/userpayment/create-intent', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
