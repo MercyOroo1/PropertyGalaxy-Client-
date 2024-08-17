@@ -36,13 +36,13 @@ const AgentApplication = () => {
 
     const handleStatusChange = async (applicationId, status) => {
         try {
-            await axios.patch(`http://127.0.0.1:5050/api/admin/applications/${applicationId}`, { status }, {
+            await axios.patch(`https://phase-5-group-project-backend-24.onrender.com/admin/applications/${applicationId}`, { status }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
             // Refresh the list after updating the status
-            const response = await axios.get('http://127.0.0.1:5050/api/admin/applications', {
+            const response = await axios.get('https://phase-5-group-project-backend-24.onrender.comhttp://127.0.0.1:5050/api/admin/applications', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
